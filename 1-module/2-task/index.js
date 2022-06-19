@@ -11,7 +11,14 @@ function print(text) {
  */
 function isValid(name) {
   // ваш код...
-}
+  if (typeof name == "object") {
+    return false;
+  } else if (name.indexOf(' ') == -1 && name.length > 3) {
+      return true;
+  } else {
+      return false;
+    }
+  }
 
 function sayHello() {
   let userName = prompt('Введите ваше имя');
